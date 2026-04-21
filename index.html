@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>कैश ड्रॉअर | Cash Drawer</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Noto+Sans+Devanagari:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+<header class="header">
+  <div class="header-top">
+    <div class="title">
+      <span>₹</span>
+      <div>
+        <h1 id="appTitle">कैश ड्रॉअर</h1>
+        <p id="subtitle">कुल नकद</p>
+      </div>
+    </div>
+
+    <button id="langBtn">EN</button>
+  </div>
+
+  <div class="total">
+    ₹ <span id="totalAmount">0</span>
+  </div>
+</header>
+
+<main>
+  <div class="grid" id="denominationGrid"></div>
+</main>
+
+<footer>
+  <button id="resetBtn">Reset</button>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
