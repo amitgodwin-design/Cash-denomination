@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="hi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
+    <title>Cash Drawer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+Devanagari:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <!-- Sticky Top Header -->
+    <header class="app-header">
+      <div class="header-inner">
+        <div class="header-left">
+          <div class="brand">
+            <div class="brand-logo">₹</div>
+            <div>
+              <div class="brand-title" data-i18n="appName">कैश ड्रॉअर</div>
+              <div class="brand-sub" data-i18n="appSub">कुल नकद</div>
+            </div>
+          </div>
+        </div>
+        <div class="header-right">
+          <button id="langToggle" class="lang-btn" title="Language">
+            <span id="langLabel">EN</span>
+          </button>
+        </div>
+      </div>
+      <div class="total-display">
+        <span class="rupee">₹</span>
+        <span id="headerTotal">0</span>
+      </div>
+    </header>
+
+    <!-- Tab Navigation -->
+    <nav class="tabs">
+      <button class="tab active" data-tab="dashboard" data-i18n="tabDashboard">डैशबोर्ड</button>
+      <button class="tab" data-tab="drawer" data-i18n="tabDrawer">कैश ड्रॉअर</button>
