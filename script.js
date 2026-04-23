@@ -51,7 +51,7 @@ function renderGrid() {
 function updateRowTotal(value, input, rowTotal) {
   const count = parseInt(input.value) || 0;
   const total = count * value;
-  rowTotal.textContent = `₹${total}`;
+  rowTotal.textContent = `₹${total.toLocaleString("en-IN")}`;
 }
 
 // 🔹 Total
@@ -92,19 +92,19 @@ langBtn.addEventListener("click", () => {
   }
 });
 
-// 🔹 Number to words (basic)
+// 🔹 Number to words (Indian style basic)
 function numberToWords(num) {
   if (num === 0) return "";
 
-  const a = ["", "One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine"];
-  const b = ["", "", "Twenty", "Thirty", "Forty", "Fifty", "Sixty", "Seventy", "Eighty", "Ninety"];
-  const c = ["Ten", "Eleven", "Twelve", "Thirteen", "Fourteen", "Fifteen"];
+  const ones = ["", "One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine"];
+  const tens = ["", "", "Twenty", "Thirty", "Forty", "Fifty", "Sixty", "Seventy", "Eighty", "Ninety"];
+  const teens = ["Ten", "Eleven", "Twelve", "Thirteen", "Fourteen", "Fifteen"];
 
-  if (num < 10) return a[num];
-  if (num < 20) return c[num - 10];
-  if (num < 100) return b[Math.floor(num / 10)] + " " + a[num % 10];
+  if (num < 10) return ones[num];
+  if (num < 20) return teens[num - 10];
+  if (num < 100) return tens[Math.floor(num / 10)] + " " + ones[num % 10];
 
-  return num; // fallback
+  return num.toLocaleString("en-IN");
 }
 
 // 🔹 Init
